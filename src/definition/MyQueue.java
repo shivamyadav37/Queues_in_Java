@@ -79,6 +79,10 @@ public class MyQueue<E> implements QueueADT<E> {
             this.previous = previous;
             this.next = next;
         }
+        //check on this
+        public Node(E item) {
+
+        }
 
         private E getData() {
             return data;
