@@ -21,6 +21,7 @@ public class MyQueue<E> implements QueueADT<E> {
     }
 
     public boolean add(int index, E item) {
+        //Check for empty queue
         if (front == null){
             rear = new Node<E>(item);
             front = rear;
