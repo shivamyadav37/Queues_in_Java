@@ -52,8 +52,12 @@ public class MyQueue<E> implements QueueADT<E> {
 
     @Override
     public E peek() {
-
-        return null;
+        if(size==0){
+            return null;
+        }
+        else {
+            return  front.data;
+        }
     }
 
     @Override
