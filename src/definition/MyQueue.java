@@ -21,6 +21,15 @@ public class MyQueue<E> implements QueueADT<E> {
     }
 
     public boolean add(int index, E item) {
+        if (front == null){
+            rear = new Node<E>(item);
+            front = rear;
+        }
+        else {
+            rear.next = new Node<E>(item);
+            rear = rear.next;
+        }
+        size++;
         return true;
     }
 
