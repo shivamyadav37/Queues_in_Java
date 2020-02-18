@@ -49,12 +49,19 @@ public class MyQueue<E> implements QueueADT<E> {
 
     @Override
     public E peek() {
+
         return null;
     }
 
     @Override
     public E poll() {
-        return null;
+        E item = peek();
+        if (item == null){
+            return null;
+        }
+        front = front.next;
+        size--;
+        return item; //return the item at the front of the queue
     }
 
     @Override
