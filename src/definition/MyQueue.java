@@ -27,6 +27,7 @@ public class MyQueue<E> implements QueueADT<E> {
             front = rear;
         }
         else {
+            //allocate a new node at the end , store item into it ,
             rear.next = new Node<E>(item);
             rear = rear.next;
         }
