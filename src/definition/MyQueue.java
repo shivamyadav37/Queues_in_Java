@@ -21,6 +21,11 @@ public class MyQueue<E> implements QueueADT<E> {
     }
 
     public boolean add(int index, E item) {
+
+    }
+
+    @Override
+    public boolean add(E item) {
         //Check for empty queue
         if (front == null){
             rear = new Node<E>(item);
@@ -33,11 +38,7 @@ public class MyQueue<E> implements QueueADT<E> {
         }
         size++;
         return true;
-    }
 
-    @Override
-    public boolean add(E item) {
-        return false;
     }
 
     private E removeFirst() {
