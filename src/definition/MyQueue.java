@@ -55,7 +55,7 @@ public class MyQueue<E> implements QueueADT<E> {
 
     @Override
     public E poll() {
-        E item = peek();
+        E item = peek(); //retrieve the item at the front
         if (item == null){
             return null;
         }
